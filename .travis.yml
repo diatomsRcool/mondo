@@ -12,6 +12,7 @@ before_script:
 
 script:
   - env | sort
+  - curl -X POST "https://monarch-jenkins.cgrb.oregonstate.edu/job/test-mondo/build" -H "Jenkins-Crumb:${ShahimCSRFCrumb}}" --user essaids:${ShahimAPIToken}} --form json='{"parameter": [{"name":"Hello", "value":"WorlParameterValue"}]}
   - ./run.sh make monarch-jenkins
 
 # whitelist
