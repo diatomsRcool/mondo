@@ -945,3 +945,11 @@ bg-stop:
 
 bg-clean:
 	rm bg-data/*
+
+# ---------------------------------------
+# Trigger monarch-jenkins build
+# ---------------------------------------
+
+monarch-jenkins:
+	env
+	
