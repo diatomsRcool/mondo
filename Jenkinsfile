@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'env; echo Hello Stage again 3';
+                sh 'env; echo Hello Stage again 4';
             }
         }
     }
