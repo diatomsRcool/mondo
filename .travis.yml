@@ -5,6 +5,7 @@ services:
 
 before_install:
   - env | sort
+  # The following triggers the Jenkis build. Shahim is managing this.
   - > 
       curl -X 
       POST "https://monarch-jenkins.cgrb.oregonstate.edu/job/test-mondo/build" 
