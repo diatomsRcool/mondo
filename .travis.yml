@@ -4,6 +4,7 @@ services:
   - docker
 
 before_install:
+  - env
   - docker pull obolibrary/odkfull
 
 before_script:
