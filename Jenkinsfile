@@ -1,8 +1,8 @@
 pipeline {
 	agent none
     stages {
-    	agent any
         stage('Hello') {
+            agent any
             steps {
                 sh 'env; echo Hello Stage again 6';
             }
