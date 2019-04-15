@@ -6,7 +6,14 @@ services:
 before_install:
   - env | sort
   - > 
-      curl -X POST "https://monarch-jenkins.cgrb.oregonstate.edu/job/test-mondo/build" -H "Jenkins-Crumb:${ShahimCSRFCrumb}" --user "essaids:${ShahimAPIToken}" --form json='{"parameter": [{"name":"Hello", "value":"WorlParameterValue2"}]}'
+      curl -X 
+      POST "https://monarch-jenkins.cgrb.oregonstate.edu/job/test-mondo/build" 
+      -H "Jenkins-Crumb:${ShahimCSRFCrumb}" 
+      --user "essaids:${ShahimAPIToken}" 
+      --form json='{
+      "parameter": [
+         {"name":"Hello", "value":"WorldParameterValue2"},
+       ]}'
   - docker pull obolibrary/odkfull
 
 before_script:
