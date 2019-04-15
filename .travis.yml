@@ -4,14 +4,14 @@ services:
   - docker
 
 before_install:
-  - env
+  - env | sort
   - docker pull obolibrary/odkfull
 
 before_script:
   - cd src/ontology
 
 script:
-  - env
+  - env | sort
   - ./run.sh make monarch-jenkins
 
 # whitelist
