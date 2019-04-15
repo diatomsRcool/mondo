@@ -17,6 +17,7 @@ branches:
   only:
     - master
     - test-travis
+    - jenkins-setup
 
 ### UNCOMMENT THIS AND ADD YOUR DETAILS:
 #notifications:
