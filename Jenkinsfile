@@ -9,9 +9,7 @@ pipeline {
         		}
         	}
             steps {
-            	dir(path: '/var/lib/jenkins/workspace/test-mondo/src/ontology'){
-                	sh 'make test';
-                }
+                	sh 'cd /var/lib/jenkins/workspace/test-mondo/src/ontology; make test';
             }
         }
     }
