@@ -13,7 +13,14 @@ before_install:
       --user "essaids:${ShahimAPIToken}" 
       --form json='{
       "parameter": [
-         {"name":"Hello", "value":"WorldParameterValue2"},
+         {"name":"TRAVIS_BRANCH", "value":"${TRAVIS_BRANCH}"},
+         {"name":"TRAVIS_COMMIT", "value":"${TRAVIS_COMMIT}"},
+         {"name":"TRAVIS_COMMIT_MESSAGE", "value":"${TRAVIS_COMMIT_MESSAGE}"},
+         {"name":"TRAVIS_PULL_REQUEST_BRANCH", "value":"${TRAVIS_PULL_REQUEST_BRANCH}"},
+         {"name":"TRAVIS_PULL_REQUEST", "value":"${TRAVIS_PULL_REQUEST_SHA}"},
+         {"name":"TRAVIS_EVENT_TYPE", "value":"${TRAVIS_EVENT_TYPE}"},
+         {"name":"TRAVIS_BUILD_WEB_URL", "value":"${TRAVIS_BUILD_WEB_URL}"},
+         {"name":"TRAVIS_BUILD_NUMBER", "value":"${TRAVIS_BUILD_NUMBER}"}
        ]}'
   - docker pull obolibrary/odkfull
 
